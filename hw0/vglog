@@ -1,0 +1,81 @@
+==19876== Memcheck, a memory error detector
+==19876== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==19876== Using Valgrind-3.13.0 and LibVEX; rerun with -h for copyright info
+==19876== Command: ./test_LQE
+==19876== Parent PID: 18586
+==19876== 
+==19876== Invalid read of size 8
+==19876==    at 0x108C46: lqe_remove_head (in /home/huang/JserV/JserV_homework/hw0/test_LQE)
+==19876==    by 0x108888: main (in /home/huang/JserV/JserV_homework/hw0/test_LQE)
+==19876==  Address 0x522d530 is 0 bytes inside a block of size 22 free'd
+==19876==    at 0x4C30D3B: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19876==    by 0x108C3E: lqe_remove_head (in /home/huang/JserV/JserV_homework/hw0/test_LQE)
+==19876==    by 0x108888: main (in /home/huang/JserV/JserV_homework/hw0/test_LQE)
+==19876==  Block was alloc'd at
+==19876==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19876==    by 0x108B4F: lqe_insert_head (in /home/huang/JserV/JserV_homework/hw0/test_LQE)
+==19876==    by 0x1087F0: main (in /home/huang/JserV/JserV_homework/hw0/test_LQE)
+==19876== 
+==19876== Invalid free() / delete / delete[] / realloc()
+==19876==    at 0x4C30D3B: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19876==    by 0x108C50: lqe_remove_head (in /home/huang/JserV/JserV_homework/hw0/test_LQE)
+==19876==    by 0x108888: main (in /home/huang/JserV/JserV_homework/hw0/test_LQE)
+==19876==  Address 0x108ed9 is in a r-x mapped file /home/huang/JserV/JserV_homework/hw0/test_LQE segment
+==19876== 
+==19876== Invalid read of size 8
+==19876==    at 0x108A02: main (in /home/huang/JserV/JserV_homework/hw0/test_LQE)
+==19876==  Address 0x522d040 is 0 bytes inside a block of size 16 free'd
+==19876==    at 0x4C30D3B: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19876==    by 0x108B03: lqe_free (in /home/huang/JserV/JserV_homework/hw0/test_LQE)
+==19876==    by 0x1089E5: main (in /home/huang/JserV/JserV_homework/hw0/test_LQE)
+==19876==  Block was alloc'd at
+==19876==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19876==    by 0x108A78: lqe_new (in /home/huang/JserV/JserV_homework/hw0/test_LQE)
+==19876==    by 0x108782: main (in /home/huang/JserV/JserV_homework/hw0/test_LQE)
+==19876== 
+==19876== Invalid read of size 8
+==19876==    at 0x108A1D: main (in /home/huang/JserV/JserV_homework/hw0/test_LQE)
+==19876==  Address 0x522d048 is 8 bytes inside a block of size 16 free'd
+==19876==    at 0x4C30D3B: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19876==    by 0x108B03: lqe_free (in /home/huang/JserV/JserV_homework/hw0/test_LQE)
+==19876==    by 0x1089E5: main (in /home/huang/JserV/JserV_homework/hw0/test_LQE)
+==19876==  Block was alloc'd at
+==19876==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19876==    by 0x108A78: lqe_new (in /home/huang/JserV/JserV_homework/hw0/test_LQE)
+==19876==    by 0x108782: main (in /home/huang/JserV/JserV_homework/hw0/test_LQE)
+==19876== 
+==19876== Invalid read of size 8
+==19876==    at 0x108A39: main (in /home/huang/JserV/JserV_homework/hw0/test_LQE)
+==19876==  Address 0x522d048 is 8 bytes inside a block of size 16 free'd
+==19876==    at 0x4C30D3B: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19876==    by 0x108B03: lqe_free (in /home/huang/JserV/JserV_homework/hw0/test_LQE)
+==19876==    by 0x1089E5: main (in /home/huang/JserV/JserV_homework/hw0/test_LQE)
+==19876==  Block was alloc'd at
+==19876==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19876==    by 0x108A78: lqe_new (in /home/huang/JserV/JserV_homework/hw0/test_LQE)
+==19876==    by 0x108782: main (in /home/huang/JserV/JserV_homework/hw0/test_LQE)
+==19876== 
+==19876== 
+==19876== HEAP SUMMARY:
+==19876==     in use at exit: 116 bytes in 5 blocks
+==19876==   total heap usage: 8 allocs, 4 frees, 1,178 bytes allocated
+==19876== 
+==19876== 21 bytes in 1 blocks are definitely lost in loss record 2 of 5
+==19876==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19876==    by 0x108B4F: lqe_insert_head (in /home/huang/JserV/JserV_homework/hw0/test_LQE)
+==19876==    by 0x1087BB: main (in /home/huang/JserV/JserV_homework/hw0/test_LQE)
+==19876== 
+==19876== 95 (29 direct, 66 indirect) bytes in 1 blocks are definitely lost in loss record 5 of 5
+==19876==    at 0x4C2FB0F: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==19876==    by 0x108BC4: lqe_insert_tail (in /home/huang/JserV/JserV_homework/hw0/test_LQE)
+==19876==    by 0x10893E: main (in /home/huang/JserV/JserV_homework/hw0/test_LQE)
+==19876== 
+==19876== LEAK SUMMARY:
+==19876==    definitely lost: 50 bytes in 2 blocks
+==19876==    indirectly lost: 66 bytes in 3 blocks
+==19876==      possibly lost: 0 bytes in 0 blocks
+==19876==    still reachable: 0 bytes in 0 blocks
+==19876==         suppressed: 0 bytes in 0 blocks
+==19876== 
+==19876== For counts of detected and suppressed errors, rerun with: -v
+==19876== ERROR SUMMARY: 7 errors from 7 contexts (suppressed: 0 from 0)
